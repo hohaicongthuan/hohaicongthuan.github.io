@@ -1,7 +1,28 @@
-h1 {
+body, html, h1, h2 {
+    height: 100%;
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Segoe UI', serif;
+    line-height: 1.8em;
+}
 
-} 
+.backgrndimg {
+    background-image: url("../img/clover.jpg");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-p {
-    
+.content-background {
+    background-color: black;
+    opacity: 65%;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
 }
