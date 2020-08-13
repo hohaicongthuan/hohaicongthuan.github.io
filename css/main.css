@@ -6,6 +6,51 @@ body, html, h1, h2 {
     line-height: 1.8em;
 }
 
+.header {
+    margin: -8px -8px 0px;
+    background-image: linear-gradient(145deg, #7379ff, #b524ef);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /*opacity: 65%;*/
+    text-align: center;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+}
+
+.left {
+    width: 15%;
+    float: left;
+}
+
+.body {
+    width: 65%;
+    float: left;
+    background-color: pink;
+    padding: 5px;
+}
+
+.right {
+    width: 15%;
+    float: left;
+}
+
+.footer {
+    margin: -8px;
+    clear: both;
+    background-image: linear-gradient(145deg, #7379ff, #b524ef);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
 .backgrndimg {
     background-image: url("../img/clover.jpg");
     min-height: 100%;
@@ -25,4 +70,63 @@ body, html, h1, h2 {
     font-size: 15px;
     letter-spacing: 8px;
     text-transform: uppercase;
+}
+
+.artworks {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    grid-template-areas:    'img-1 img-2'
+                            'img-3 img-4';
+}
+
+.artworks img {
+    background-position: center;
+}
+
+.img-1 {
+    grid-area: img-1;
+    background-image: url("../img/christmas.jpg");
+}
+
+.img-2 {
+    grid-area: img-2;
+    background-image: url("../img/clover.jpg");
+}
+
+.img-3 {
+    grid-area: img-3;
+    background-image: url("../img/coffee.jpg");
+}
+
+.img-4 {
+    grid-area: img-4;
+    background-image: url("../img/flan-and-tea.jpg");
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
