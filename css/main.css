@@ -48,11 +48,11 @@ h1, h2, p {
 }
 
 .backgrnd {
-    background-image: url("../img/artwork-clover.jpg");
+    background-image: url("../img/artwork-clover-background.jpg");
     /* min-height: auto; */
     background-attachment: fixed;
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(5px);
 }
@@ -229,9 +229,14 @@ a:active {
     */
 }
 
-
 @media screen and (max-width: 1000px) {
     .avatar {
         position: relative;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .backgrnd {
+        background-image: url("../img/artwork-clover.jpg");
     }
 }
