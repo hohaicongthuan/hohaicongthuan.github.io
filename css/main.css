@@ -2,6 +2,7 @@ body, html, h1, h2 {
     height: 100%;
     margin: 0;
     line-height: 1.8em;
+    text-shadow: 3px #00000091;
 }
 
 h1, h2, p {
@@ -37,20 +38,6 @@ h1, h2, p {
 .container {
     width: 100%;
 }
-
-/*
-.left {
-    width: 15%;
-    float: left;
-}
-*/
-
-/*
-.right {
-    width: 15%;
-    float: left;
-}
-*/
 
 .footer {
     clear: both;
@@ -111,6 +98,16 @@ h1, h2, p {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 25px;
+    border-radius: 5%;
+    padding: 5px;
+}
+
+.polaroid:hover {
+    border: 3px solid rgb(9, 151, 33)
+}
+
+img {
+    border-radius: 5%;
 }
 
 .desc {
@@ -123,30 +120,30 @@ h1, h2, p {
 
 /* unvisited link */
 a:link {
-    color: rgb(37, 87, 30);
+    color: rgb(13, 61, 6);
     text-decoration: none;
-    text-shadow: 1px 1px #000000c1;
+    text-shadow: 2px #000000c1;
 }
   
 /* visited link */
 a:visited {
     color: rgb(37, 87, 30);
     text-decoration: none;
-    text-shadow: 1px 1px #000000c1;
+    text-shadow: 2px #000000c1;
 }
 
 /* mouse over link */
 a:hover {
     color: rgb(26, 175, 181);
     text-decoration: none;
-    text-shadow: 1px 1px #000000c1;
+    text-shadow: 2px #000000c1;
 }
 
 /* selected link */
 a:active {
     color: blue;
     text-decoration: none;
-    text-shadow: 1px 1px #000000c1;
+    text-shadow: 2px #000000c1;
 }
 
 * {
