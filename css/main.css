@@ -7,28 +7,30 @@ body, html, h1, h2 {
 
 h1, h2 {
     font-family: 'Raleway', sans-serif;
+    text-shadow: 0px 0px 5px #000000be;
+    color:#ffffff;
 }
 
 p {
     font-family: 'Noto Sans Display', sans-serif;
+    text-shadow: 0px 0px 5px #000000be;
+    color:#ffffff;
 }
 
 .body {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 5%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5px;
     border-radius: 30px 30px 0px 0px;
-    background-color: rgba(121, 177, 66, 0.939);
+    background-color: rgba(32, 44, 17, 0.705);
     background-position: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 20px #000000;
 }
 
 .header {
     font-family: 'Pangolin', cursive;
-    /* background-image: linear-gradient(145deg, #32ccee, #18e14a); */
     color: white;
     text-align: center;
     position: relative;
@@ -36,7 +38,17 @@ p {
     font-size: 30px;
     letter-spacing: 8px;
     text-transform: uppercase;
-    /* text-shadow: 2px 2px 2px #000000c1; */
+    text-shadow: 0px 0px 10px #000000;
+}
+
+.column-left img {
+    filter: invert(1);
+    box-shadow: 0px, 0px, 10px;
+}
+
+.column-right img {
+    filter: invert(1);
+    box-shadow: 0px, 0px, 10px;
 }
 
 .container {
@@ -49,6 +61,7 @@ p {
     color: white;
     text-align: center;
     padding: 10px;
+    text-shadow: 0px 0px 10px #000000c4;
 }
 
 .backgrnd {
@@ -71,8 +84,6 @@ p {
 
 .tooltip {
     position: relative;
-    /* display: inline-block; */
-    /* border-bottom: 1px dotted black; */
 }
 
 .tooltip .tooltiptext {
@@ -97,14 +108,22 @@ p {
 .polaroid {
     width: 100%;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 10px #000000d7;
     margin-bottom: 25px;
     border-radius: 5%;
     padding: 5px;
+    transition: box-shadow 0.5s;
+}
+
+.polaroid p {
+    color: #000000;
+    text-shadow: 0px 0px 0px;
 }
 
 .polaroid:hover {
-    border: 3px solid rgb(9, 151, 33)
+    /* border: 3px solid rgb(31, 255, 69); */
+    box-shadow: 0px 0px 30px #9fff9f;
+    transition: box-shadow 0.5s;
 }
 
 img {
@@ -119,58 +138,54 @@ img {
     padding: 10px 20px;
 }
 
-/* unvisited link */
 a:link {
-    color: rgb(13, 61, 6);
+    color: rgb(44, 197, 21);
     text-decoration: none;
-    /* text-shadow: 2px #000000c1; */
+    transition: color 0.5s;
 }
   
-/* visited link */
 a:visited {
-    color: rgb(37, 87, 30);
+    color: rgb(44, 197, 21);
     text-decoration: none;
-    /* text-shadow: 2px #000000c1; */
+    transition: color 0.5s;
 }
 
-/* mouse over link */
 a:hover {
-    color: rgb(26, 175, 181);
+    color: rgb(30, 196, 202);
     text-decoration: none;
-    /* text-shadow: 2px #000000c1; */
+    transition: color 0.5s;
 }
 
-/* selected link */
 a:active {
     color: blue;
     text-decoration: none;
-    /* text-shadow: 2px #000000c1; */
+    transition: color 0.5s;
 }
 
 * {
     box-sizing: border-box;
-  }
+}
   
-  /* Create three equal columns that floats next to each other */
-  .column {
+  /* Create three columns that floats next to each other */
+.column {
     float: left;
     width: 100%;
-  }
+}
 
-  .left {
+.left {
     width: 70%;
-  }
-  
-  .middle, .right {
+}
+
+.middle, .right {
     width: 35%;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 .YoutubeVideo {
 	margin-top: 50px;
@@ -179,6 +194,13 @@ a:active {
 	padding-top: 50px;
 	height: 0;
 	overflow: hidden;
+    box-shadow: 0px 0px 10px #000000;
+    transition: box-shadow 0.5s;
+}
+
+.YoutubeVideo:hover {
+    box-shadow: 0px 0px 20px #93ff93;
+    transition: box-shadow 0.5s;
 }
 
 .YoutubeVideo iframe, .YoutubeVideo object, .YoutubeVideo embed {
@@ -200,8 +222,8 @@ a:active {
     .artworks {
         padding-left: 5%;
         padding-right: 5%;
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-top: 1%;
+        padding-bottom: 20%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
@@ -213,8 +235,8 @@ a:active {
     .artworks {
         padding-left: 5%;
         padding-right: 5%;
-        padding-top: 5%;
-        padding-bottom: 20%;
+        padding-top: 1%;
+        padding-bottom: 60%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
@@ -226,28 +248,30 @@ a:active {
     .artworks {
         padding-left: 5%;
         padding-right: 5%;
-        padding-top: 5%;
-        padding-bottom: 200%;
+        padding-top: 1%;
+        padding-bottom: 120%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-gap: 3%;
+        grid-gap: 1%;
     }
 }
 
 .avatar {
     float: right;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 20px #00000085;
     border-radius: 10%;
     padding: 5px;
     position: relative;
-    /*
-    left: 70%;
-    right: 15%;
-    top: 5%;
-    bottom: 80%;
-    */
+    transition: box-shadow 0.5s;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.avatar:hover {
+    box-shadow: 0px 0px 20px #6dff6de1;
+    transition: box-shadow 0.5s;
 }
 
 @media screen and (max-width: 1000px) {
