@@ -1,0 +1,81 @@
+.terminal p {
+    font-family: monospace;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.terminal-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+ }
+
+.terminal {
+    background-color: #00000088;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px #0000007e;
+}
+
+.terminal-input {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.terminal-result {
+    width: 100%;
+    height: 400px;
+    padding: 15px 20px;
+    overflow-y: auto;
+    resize: none;
+    border: none;
+    line-height: 20px;
+    display: block;
+    word-break: break-all;
+}
+
+.userEnteredText {
+    font-size: 16px;
+    color: #cccbcb9a;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-size: 16px;
+    background-color: #0000009d;
+    color: white;
+    font-family: monospace;
+    vertical-align: middle;
+}
+
+.errorText {
+    color: rgb(255, 75, 75);
+}
+
+/* Customise scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

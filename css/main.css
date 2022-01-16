@@ -60,18 +60,16 @@ p {
     background-image: linear-gradient(145deg, #32ccee, #18e14a);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 3px;
     text-shadow: 0px 0px 10px #000000c4;
 }
 
 .backgrnd {
     background-image: url("../img/artwork-clover-background.jpg");
-    /* min-height: auto; */
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* backdrop-filter: blur(5px); */
 }
 
 .artworks {
@@ -88,7 +86,7 @@ p {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 150px;
     background-color: rgb(50, 53, 50);
     color: white;
     text-align: center;
@@ -99,6 +97,7 @@ p {
     bottom: 170%;
     left: 50%;
     margin-left: -60px;
+    box-shadow: 0 0 15px #000000;
 }
 
 .tooltip:hover .tooltiptext {
@@ -284,4 +283,8 @@ a:active {
     .backgrnd {
         background-image: url("../img/artwork-clover.jpg");
     }
+}
+
+.nerdModeButton {
+    display: block;
 }
