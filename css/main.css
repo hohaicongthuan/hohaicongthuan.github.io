@@ -7,6 +7,10 @@ body, html, h1, h2 {
 
 hr {
     height: 1px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: -1px -1px 3px #ffffff, 1px 1px 3px #000000;
 }
 
 h1, h2 {
@@ -27,10 +31,15 @@ p {
     margin-right: 5%;
     margin-top: 5px;
     border-radius: 30px 30px 0px 0px;
-    background-color: rgba(32, 44, 17, 0.705);
+    background: linear-gradient(-45deg,#00000000 93% 0, #d6ffddb4),
+                linear-gradient(45deg,#00000000 93% 0, #7edb8c96),
+                linear-gradient(135deg,#00000000 93% 0, #78dd8796),
+                linear-gradient(-135deg,#00000000 93% 0, #8bdd9796);
+    background-color: #061b09a9;
     background-position: center;
     backdrop-filter: blur(20px);
-    box-shadow: 0px 0px 20px #000000;
+    box-shadow: -1px -1px 2px #ffffff88, 1px 1px 2px #00000088, 0 0 20px #000000;
+    outline: 1px solid #ffffff55;
 }
 
 .header {

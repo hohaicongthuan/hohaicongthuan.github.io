@@ -99,8 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 getTimeAndDate('time');
                 break;
             case "time":
-            case "what time is it":
-            case "what time is it?":
                 getTimeAndDate('time');
                 break;
             case "clear":
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 printText("You too! :)");
                 break;
             case "exit":
-                window.open("index.html", "_self");
+                window.open("https://hohaicongthuan.github.io", "_self");
                 break;
             default:
                 printText("<p class='errorText'>Unrecognised command.</p>");
