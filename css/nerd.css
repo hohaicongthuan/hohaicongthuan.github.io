@@ -89,3 +89,29 @@ input[type="text"] {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@media screen and (min-width: 1700px) {
+    .terminal-result {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .terminal-result {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .terminal-container {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .terminal-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

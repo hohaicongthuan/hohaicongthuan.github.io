@@ -1,8 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html, h1, h2 {
     height: 100%;
     margin: 0;
     line-height: 1.7em;
-    /* text-shadow: 3px #00000091; */
 }
 
 hr {
@@ -133,7 +136,6 @@ p {
 }
 
 .polaroid:hover {
-    /* border: 3px solid rgb(31, 255, 69); */
     box-shadow: 0px 0px 30px #9fff9f;
     transition: box-shadow 0.5s;
 }
@@ -172,10 +174,6 @@ a:active {
     color: blue;
     text-decoration: none;
     transition: color 0.5s;
-}
-
-* {
-    box-sizing: border-box;
 }
   
   /* Create three columns that floats next to each other */
@@ -223,7 +221,7 @@ a:active {
 	height: 100%;
 }
 
-  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
     .column {
         width: 100%;
@@ -254,6 +252,11 @@ a:active {
         grid-template-rows: auto;
         grid-gap: 3%;
     }
+
+    .body {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -266,6 +269,11 @@ a:active {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-gap: 1%;
+    }
+
+    .body {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

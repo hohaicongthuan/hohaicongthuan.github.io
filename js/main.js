@@ -106,15 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case "help":
                 printText('help - to print this help information.');
-                printText("clear - to console's screen.");
+                printText("clear - to clear console's screen.");
                 printText("exit - to quit NERD MODE.");
-                printText("now - to see what's time right now.");
+                printText("now - to see what's the time right now.");
                 break;
             case "nerd":
                 printText("You too! :)");
                 break;
             case "exit":
-                window.open("https://hohaicongthuan.github.io", "_self");
+                window.open("index.html", "_self");
                 break;
             default:
                 printText("<p class='errorText'>Unrecognised command.</p>");
