@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100 vh;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #777;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px #000;
+    box-shadow: inset 0 0 2px #fff, 0 0 2px #fff;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 15%, transparent 55%);
+    text-align: center;
+    text-shadow: 0 0 10px #fff;
+    user-select: none;
+}
+
+.button:hover {
+    background-image:   linear-gradient(180deg, rgba(255, 255, 255, 0.7) 15%, transparent 55%),
+                        radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.8), transparent);
+    box-shadow: 0 0 20px rgb(0, 255, 0);
+    background-color: rgb(0, 255, 0);
+}
+
+.button:active {
+    box-shadow: inset 0 1px 2px #000;
+    filter: brightness(.7);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 30% auto auto;
+    gap: 15px
+}
+
+.window {
+    width: 100%;
+    height: 100%;
+    border: solid 1px #000;
+    border-radius: 5px;
+    box-shadow: inset 0 0 2px #fff, 0 0 20px #000;
+
+}
+
+.title-bar {
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff;
+}
+
+.title-bar-title {
+    float: left;
+}
+
+.title-bar-buttons {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.minimise-button {
+    display: block;
+}
+
+.close-button {
+    display: block;
+}
+
+#title {
+    grid-column: span 2;
+    grid-row: 1;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+}
+
+#menu {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    display: block;
+    border: solid 1px #000;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 2px #fff, 0 0 15px #000;
+}
+
+#summary {
+    width: 100%;
+}
+
+#windows {
+    grid-column: 2;
+    grid-row: span 2;
+    padding: 0 20px;
+}
