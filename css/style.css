@@ -11,6 +11,21 @@ body {
     user-select: none;
 }
 
+h1 {
+    font-size: 24pt;
+    color: #fff;
+    text-shadow: 0 0 5px #000, 0 0 10px #000;
+}
+
+h1::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    position: relative;
+    z-index: 10;
+    background-color: #fff7;
+}
+
 p {
     font-size: 11pt;
     color: #fff;
@@ -41,7 +56,7 @@ p a:hover {
     max-width: 900px;
     width: 100%;
     margin: 20px auto 20px auto;
-    padding: 0 5px 5px 5px;
+    padding: 0 6px 6px 6px;
     border-radius: 6px;
     backdrop-filter: blur(15px);
     border: solid 1px #000a;
@@ -52,6 +67,10 @@ p a:hover {
                         linear-gradient(45deg,#00000000 90% 0, #ffffff88),
                         linear-gradient(135deg,#00000000 90% 0, #ffffff88),
                         linear-gradient(-135deg,#00000000 90% 0, #ffffff88);
+}
+
+.window-border-opaque {
+    background-image: linear-gradient(180deg, transparent 10%, #fff7 50%, transparent 55%);
 }
 
 .window-title-bar {
@@ -88,6 +107,24 @@ p a:hover {
     border-bottom-right-radius: 3px;
 }
 
+.minimise-button::before {
+    content: '_';
+    position: relative;
+    z-index: 10;
+}
+
+.maximise-button::before {
+    content: '\25A1';
+    position: relative;
+    z-index: 10;
+}
+
+.close-button::before {
+    content: '×';
+    position: relative;
+    z-index: 10;
+}
+
 .minimise-button {
     border-bottom-left-radius: 3px;
     border: solid 1px #000;
@@ -103,15 +140,30 @@ p a:hover {
     box-shadow: inset 0 0 3px #fff, inset 0 0 3px #fff;
     border-right: none;
     background-image: linear-gradient(180deg, #ffffff90 50%, transparent 50%);
+    position: relative;
 }
 
-.minimise-button:hover {
+.minimise-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 3px;
     box-shadow: 0 0 15px #7eff7e,
                 0 0 15px #7eff7e,
                 inset 0 0 3px #fff,
                 inset 0 0 3px #fff;
     background-image:   linear-gradient(180deg, #ffffff90 50%, transparent 50%),
                         radial-gradient(ellipse at bottom, #7eff7e 15%, transparent 50%);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.minimise-button:hover::after {
+    opacity: 1;
+    transition: opacity .3s;
 }
 
 .minimise-button:active {
@@ -132,15 +184,29 @@ p a:hover {
     box-shadow: inset 0 0 3px #fff, inset 0 0 3px #fff;
     border-top: none;
     background-image: linear-gradient(180deg, #ffffff90 50%, transparent 50%);
+    position: relative;
 }
 
-.maximise-button:hover {
+.maximise-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     box-shadow: 0 0 15px #7eff7e,
                 0 0 15px #7eff7e,
                 inset 0 0 3px #fff,
                 inset 0 0 3px #fff;
     background-image:   linear-gradient(180deg, #ffffff90 50%, transparent 50%),
                         radial-gradient(ellipse at bottom, #7eff7e 15%, transparent 50%);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.maximise-button:hover::after {
+    opacity: 1;
+    transition: opacity .3s;
 }
 
 .maximise-button:active {
@@ -161,15 +227,30 @@ p a:hover {
     box-shadow: inset 0 0 4px #ffffff90, inset 0 0 4px #ffffff90;
     border-top: none;
     background-image: linear-gradient(180deg, #ffffff90 50%, transparent 50%);
+    position: relative;
 }
 
-.close-button:hover {
+.close-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom-right-radius: 3px;
     box-shadow: 0 0 15px #ff4f4f,
                 0 0 15px #ff4f4f,
                 inset 0 0 4px #ffffff90,
                 inset 0 0 4px #ffffff90;
     background-image:   linear-gradient(180deg, #ffffff90 50%, transparent 50%),
                         radial-gradient(ellipse at bottom, #ff9e4f 15%, transparent 50%);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.close-button:hover::after {
+    opacity: 1;
+    transition: opacity .3s;
 }
 
 .close-button:active {
@@ -177,13 +258,21 @@ p a:hover {
 }
 
 .window-content {
-    background-color: #3f3f3f;
     width: 100%;
     border: solid 1px #000a;
     box-shadow: 0 0 2px #fff;
     padding-left: 20px;
     padding-right: 20px;
-    overflow-x: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.window-content-transparent {
+    background-color: #0000;
+}
+
+.window-content-opaque {
+    background-color: #3f3f3f;
 }
 
 .grid-container {
@@ -200,9 +289,11 @@ p a:hover {
 
 .grid-item img {
     width: 100%;
+    position: relative;
     border: solid 1px #000a;
     display: block;
     box-shadow: 0 0 2px #fffa;
+    z-index: 10;
 }
 
 .grid-item {
@@ -213,15 +304,29 @@ p a:hover {
     box-shadow: inset 0 0 2px #fff, 0 0 20px #000;
     background-image: linear-gradient(180deg, transparent, #ffffff66 50%, transparent 55%);
     text-decoration: none;
-    transition: all 0.5s;
+    transition: filter 0.3s;
+    position: relative;
 }
 
-.grid-item:hover {
+.grid-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
     box-shadow: inset 0 0 2px #fff, 0 0 20px #85ff85;
     background-color: #00ff0088;
     background-image:   linear-gradient(180deg, transparent, #ffffffb3 50%, transparent 55%),
                         radial-gradient(ellipse at bottom, #ffffff80 15%, transparent 70%);
-    transition: all .5s;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.grid-item:hover::after {
+    opacity: 1;
+    transition: opacity .3s;
 }
 
 .grid-item:active {
@@ -234,6 +339,8 @@ p a:hover {
     font-weight: bold;
     text-shadow: 0 0 5px #000, 0 0 10px #000;
     margin-top: 10px;
+    position: relative;
+    z-index: 10;
 }
 
 .YoutubeVideo {
@@ -261,29 +368,95 @@ p a:hover {
 
 #avatar {
     float: right;
+    position: relative;
     border: solid 1px #000;
     border-radius: 6px;
     margin: 20px;
     box-shadow: inset 0 0 2px #fff, 0 0 10px #000;
     background-color: #0003;
     background-image: linear-gradient(180deg, transparent, #fff8 50%, transparent 55%);
-    transition: all .5s;
 }
 
-#avatar:hover {
+#avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 6px;
     background-color: #00ff0088;
     box-shadow: inset 0 0 2px #fff, 0 0 20px #77ff77;
     background-image:   linear-gradient(180deg, transparent, #fffd 50%, transparent 55%),
                         radial-gradient(ellipse at bottom, #fffd 20%, transparent 90%);
-    transition: all .5s;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+#avatar:hover::after {
+    opacity: 1;
+    transition: opacity .3s;
 }
 
 #avatar img {
     width: 150px;
     margin: 10px;
+    position: relative;
+    z-index: 10;
     border-radius: 5px;
     border: solid 1px #000;
     box-shadow: 0 0 2px #fff;
+}
+
+.button {
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 10px;
+    color: #000;
+    font-size: 11pt;
+    font-weight: bold;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    background-color: #3333;
+    background-image: linear-gradient(180deg, #fff7 10%, transparent 60%);
+    border: solid 1px #000;
+    border-radius: 5px;
+    box-shadow: inset 0 0 2px #fff;
+    text-decoration: none;
+    position: relative;
+    transition: filter .5s;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: inset 0 0 2px #fff, 0 0 15px #85ff6c;
+    background-color: #58ff2e33;
+    background-image:   linear-gradient(180deg, #fff7 10%, transparent 60%),
+                        radial-gradient(ellipse at bottom, #fff7 30%, transparent 70%);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.button:hover::after {
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.button:active {
+    filter: brightness(.7) contrast(1.7);
+}
+
+.dl-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* Scrollbar Customisation */
