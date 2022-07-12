@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ body {
 }
 
 h1 {
-    font-size: 24pt;
+    font-size: 2em;
     color: #fff;
     text-shadow: 0 0 5px #000, 0 0 10px #000;
 }
@@ -27,11 +31,11 @@ h1::after {
 }
 
 p {
-    font-size: 11pt;
+    font-size: 1em;
     color: #fff;
     text-shadow: 0 0 5px #000, 0 0 5px #000;
-    line-height: 7mm;
-    margin-left: 20px;
+    line-height: 1.7em;
+    margin: 1em 2em;
 }
 
 p a {
@@ -63,7 +67,7 @@ p a:hover {
     border-bottom-right-radius: 6px;
     backdrop-filter: blur(10px);
     border: solid 1px #000a;
-    box-shadow: 0 0 15px #000, inset 0 0 2px #fff;
+    box-shadow: 0 0 15px #000, inset 0 0 1px 1px #fffa;
     background-color: #0009;
     background-image:   linear-gradient(180deg,#ddd6 10%, #0000 55%);
     position: sticky;
@@ -78,22 +82,18 @@ p a:hover {
     padding: 0 6px 6px 6px;
     border-radius: 6px;
     backdrop-filter: blur(15px);
-    border: solid 1px #000a;
-    box-shadow: 0 0 20px #000, inset 0 0 2px #fff;
+    border: solid 1px #000;
+    box-shadow: 0 0 20px #000, inset 0 0 1px 1px #fffa;
     overflow: hidden;
-    background-color: #00000090;
-    background-image:   linear-gradient(-40deg,#0000 95% 0, #fff8),
-                        linear-gradient(40deg,#0000 95% 0, #fff8),
-                        linear-gradient(135deg,#0000 95% 0, #fff8),
-                        linear-gradient(-135deg,#0000 95% 0, #fff8);
+    background-color: #000c;
+    background-image:   radial-gradient(circle at bottom left,#0000 95%, #fff5),
+                        radial-gradient(circle at bottom right,#0000 95%, #fff5);
 }
 
 .window-border-opaque {
-    background-image:   linear-gradient(180deg, #0000 10%, #fff7 50%, #0000 55%),
-                        linear-gradient(-40deg,#0000 95% 0, #fff8),
-                        linear-gradient(40deg,#0000 95% 0, #fff8),
-                        linear-gradient(135deg,#0000 95% 0, #fff8),
-                        linear-gradient(-135deg,#0000 95% 0, #fff8);
+    background-image:   radial-gradient(circle at bottom left,#0000 80%, #fff5),
+                        radial-gradient(circle at bottom right,#0000 80%, #fff5),
+                        linear-gradient(180deg, #0000 20%, #fffa 50%, #0000 55%);
 }
 
 .window-title-bar {
@@ -125,7 +125,7 @@ p a:hover {
     padding: 0;
     width: fit-content;
     user-select: none;
-    box-shadow: 0 0 2px #fff;
+    box-shadow: 0 0 1px 1px #fffa;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -160,9 +160,9 @@ p a:hover {
     background-color: #58ff2e33;
     float: right;
     line-height: 10px;
-    box-shadow: inset 0 0 3px #fff, inset 0 0 3px #fff;
+    box-shadow: inset 0 0 3px 1px #fff9;
     border-right: none;
-    background-image: linear-gradient(180deg, #fff9 50%, #0000 50%);
+    background-image: linear-gradient(180deg, #fffa 30%, #0000 60%);
     position: relative;
 }
 
@@ -174,11 +174,9 @@ p a:hover {
     bottom: 0;
     left: 0;
     border-bottom-left-radius: 3px;
-    box-shadow: 0 0 15px #7eff7e,
-                0 0 15px #7eff7e,
-                inset 0 0 3px #fff,
-                inset 0 0 3px #fff;
-    background-image:   linear-gradient(180deg, #fff9 50%, #0000 50%),
+    box-shadow: 0 0 15px 2px #7eff7e,
+                inset 0 0 3px 1px #fff9;
+    background-image:   linear-gradient(180deg, #fffa 30%, #0000 60%),
                         radial-gradient(ellipse at bottom, #7eff7e 15%, #0000 50%);
     opacity: 0;
     transition: opacity .5s;
@@ -204,9 +202,9 @@ p a:hover {
     background-color: #58ff2e33;
     float: right;
     line-height: 16px;
-    box-shadow: inset 0 0 3px #fff, inset 0 0 3px #fff;
+    box-shadow: inset 0 0 3px 1px #fff9;
     border-top: none;
-    background-image: linear-gradient(180deg, #fff9 50%, #0000 50%);
+    background-image: linear-gradient(180deg, #fffa 30%, #0000 60%);
     position: relative;
 }
 
@@ -217,11 +215,9 @@ p a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    box-shadow: 0 0 15px #7eff7e,
-                0 0 15px #7eff7e,
-                inset 0 0 3px #fff,
-                inset 0 0 3px #fff;
-    background-image:   linear-gradient(180deg, #fff9 50%, #0000 50%),
+    box-shadow: 0 0 15px 2px #7eff7e,
+                inset 0 0 3px 1px #fff9;
+    background-image:   linear-gradient(180deg, #fffa 30%, #0000 60%),
                         radial-gradient(ellipse at bottom, #7eff7e 15%, #0000 50%);
     opacity: 0;
     transition: opacity .5s;
@@ -247,9 +243,9 @@ p a:hover {
     background-color: #c51515;
     float: right;
     line-height: 16px;
-    box-shadow: inset 0 0 4px #fff9, inset 0 0 4px #fff9;
+    box-shadow: inset 0 0 3px 1px #fff9;
     border-top: none;
-    background-image: linear-gradient(180deg, #fff9 50%, #0000 50%);
+    background-image: linear-gradient(180deg, #fffa 30%, #0000 60%);
     position: relative;
 }
 
@@ -261,12 +257,10 @@ p a:hover {
     bottom: 0;
     left: 0;
     border-bottom-right-radius: 3px;
-    box-shadow: 0 0 15px #ff4f4f,
-                0 0 15px #ff4f4f,
-                inset 0 0 4px #fff9,
-                inset 0 0 4px #fff9;
-    background-image:   linear-gradient(180deg, #fff9 50%, #0000 50%),
-                        radial-gradient(ellipse at bottom, #ff9e4f 15%, #0000 50%);
+    box-shadow: 0 0 15px 2px #ff4f4f,
+                inset 0 0 3px 1px #fff9;
+    background-image:   linear-gradient(180deg, #fffa 30%, #0000 60%),
+                        radial-gradient(ellipse at bottom, #ff9e4f 15%, #0000 60%);
     opacity: 0;
     transition: opacity .5s;
 }
@@ -282,8 +276,8 @@ p a:hover {
 
 .window-content {
     width: 100%;
-    border: solid 1px #000a;
-    box-shadow: 0 0 2px #fff;
+    border: solid 1px #000;
+    box-shadow: 0 0 1px 1px #fffa;
     padding-left: 20px;
     padding-right: 20px;
     position: relative;
@@ -313,9 +307,9 @@ p a:hover {
 .grid-item img {
     width: 100%;
     position: relative;
-    border: solid 1px #000a;
+    border: solid 1px #000;
     display: block;
-    box-shadow: 0 0 2px #fffa;
+    box-shadow: 0 0 1px 1px #fffa;
     z-index: 10;
 }
 
@@ -324,8 +318,8 @@ p a:hover {
     margin: 10px;
     border-radius: 5px;
     border: solid 1px #000a;
-    box-shadow: inset 0 0 2px #fff, 0 0 20px #000;
-    background-image: linear-gradient(180deg, #0000, #fff6 50%, #0000 55%);
+    box-shadow: inset 0 0 1px 1px #fffa, 0 0 20px #000;
+    background-image: linear-gradient(180deg, #0000, #fff7 50%, #0000 55%);
     text-decoration: none;
     transition: filter 0.3s;
     position: relative;
@@ -339,9 +333,9 @@ p a:hover {
     right: 0;
     bottom: 0;
     border-radius: 5px;
-    box-shadow: inset 0 0 2px #fff, 0 0 20px #85ff85;
+    box-shadow: inset 0 0 1px 1px #fffa, 0 0 20px #85ff85;
     background-color: #58ff2e33;
-    background-image:   linear-gradient(180deg, #0000, #fffb 50%, #0000 55%),
+    background-image:   linear-gradient(180deg, #0000, #fffa 50%, #0000 55%),
                         radial-gradient(ellipse at bottom, #fff9 20%, #0000 80%);
     opacity: 0;
     transition: opacity .5s;
@@ -364,6 +358,7 @@ p a:hover {
     margin-top: 10px;
     position: relative;
     z-index: 10;
+    font-size: 1em;
 }
 
 .YoutubeVideo {
@@ -376,15 +371,17 @@ p a:hover {
 }
 
 #big-title {
-    font-size: 36pt;
+    font-size: 4em;
     font-weight: bold;
+    font-variant: small-caps;
+    letter-spacing: 20px;
     color: #fff;
     text-shadow: 0 0 10px #000;
     text-align: center;
     border-top: solid 3px #fff;
     border-bottom: solid 3px #fff;
-    backdrop-filter: blur(15px);
-    background-color: #0005;
+    backdrop-filter: blur(20px);
+    background-color: #0007;
 }
 
 #avatar {
@@ -393,7 +390,7 @@ p a:hover {
     border: solid 1px #000;
     border-radius: 6px;
     margin: 20px;
-    box-shadow: inset 0 0 2px #fff, 0 0 10px #000;
+    box-shadow: inset 0 0 1px 1px #fffa, 0 0 10px #000;
     background-color: #0003;
     background-image: linear-gradient(180deg, #0000, #fff8 50%, #0000 55%);
 }
@@ -407,7 +404,7 @@ p a:hover {
     left: 0;
     border-radius: 6px;
     background-color: #58ff2e33;
-    box-shadow: inset 0 0 2px #fff, 0 0 20px #77ff77;
+    box-shadow: inset 0 0 1px 1px #fffa, 0 0 20px #77ff77;
     background-image:   linear-gradient(180deg, #0000, #fff7 50%, #0000 55%),
                         radial-gradient(ellipse at bottom, #fff7 30%, #0000 70%);
     transition: opacity .5s;
@@ -426,7 +423,7 @@ p a:hover {
     z-index: 10;
     border-radius: 5px;
     border: solid 1px #000;
-    box-shadow: 0 0 2px #fff;
+    box-shadow: 0 0 1px 1px #fffa;
 }
 
 .button {
@@ -434,14 +431,14 @@ p a:hover {
     padding: 10px 20px;
     margin: 5px;
     color: #000;
-    font-size: 11pt;
+    font-size: 1em;
     font-weight: bold;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #fff;
     background-color: #3333;
     background-image: linear-gradient(180deg, #fff7 10%, #0000 60%);
     border: solid 1px #000;
     border-radius: 5px;
-    box-shadow: inset 0 0 2px #fff;
+    box-shadow: inset 0 0 1px 1px #fffa, 0 0 1px 1px #fffa;
     text-decoration: none;
     position: relative;
     transition: filter .5s;
@@ -457,7 +454,7 @@ p a:hover {
     left: 0;
     border-radius: 5px;
     text-decoration: none;
-    box-shadow: inset 0 0 2px #fff, 0 0 15px #85ff6c;
+    box-shadow: inset 0 0 1px 1px #fffa, 0 0 15px #85ff6c;
     background-color: #58ff2e33;
     background-image:   linear-gradient(180deg, #fff7 10%, #0000 60%),
                         radial-gradient(ellipse at bottom, #fff7 30%, #0000 70%);
