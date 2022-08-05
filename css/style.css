@@ -71,6 +71,7 @@ p a:hover {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: solid 1px #000a;
     box-shadow: 0 0 15px #000, inset 0 0 1px 1px #fffa;
     background-color: #0009;
@@ -87,6 +88,7 @@ p a:hover {
     padding: 0 6px 6px 6px;
     border-radius: 6px;
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: solid 1px #000;
     box-shadow: 0 0 20px #000, inset 0 0 1px 1px #fffa;
     overflow: hidden;
@@ -386,6 +388,7 @@ p a:hover {
     border-top: solid 3px #fff;
     border-bottom: solid 3px #fff;
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     background-color: #0007;
     display: block;
     position: relative;
